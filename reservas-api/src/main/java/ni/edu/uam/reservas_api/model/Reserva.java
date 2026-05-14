@@ -47,7 +47,6 @@ public class Reserva {
     @Column(nullable = false, length = 200)
     private String motivo;
 
-    @NotNull(message = "Debe asignarse una sala de estudio")
     @ManyToOne
     @JoinColumn(name = "sala_id", nullable = false)
     private SalaEstudio salaEstudio;
