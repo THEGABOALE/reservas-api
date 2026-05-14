@@ -18,7 +18,6 @@ El proyecto implementa operaciones CRUD, persistencia con PostgreSQL y una relac
 - [Ejemplos de uso](#ejemplos-de-uso)
 - [Pruebas en Postman](#pruebas-en-postman)
 - [Documentación del proyecto](#documentación-del-proyecto)
-- [Repositorio](#repositorio)
 - [Autor](#autor)
 
 ---
