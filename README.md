@@ -277,7 +277,7 @@ Pruebas principales realizadas:
 La documentación final del proyecto estará disponible en la carpeta `docs`.
 
 - [Ver carpeta de documentación](docs/)
-- [Ver informe PDF](docs/pdf/Informe%20API%20Reservas.pdf)
+- [Ver informe PDF](docs/Api%20con%20Springbot%20docs.pdf)
 - [Ver colección de Postman](docs/postman/Reservas%20API%20-%20Pruebas%20CRUD.postman_collection.json)
 
 El informe PDF incluye:
