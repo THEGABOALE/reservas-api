@@ -1,0 +1,480 @@
+{
+  "info": {
+    "_postman_id": "f8a3e936-cfbd-4f4e-95c1-85703ec74418",
+    "name": "Reservas API - Pruebas CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54518558",
+    "_collection_link": "https://go.postman.co/collection/54518558-f8a3e936-cfbd-4f4e-95c1-85703ec74418?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 - Crear sala principal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Sala de Estudio A\",\r\n  \"ubicacion\": \"Biblioteca Central - Primer piso\",\r\n  \"capacidad\": 8,\r\n  \"disponible\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 - Crear sala multimedia",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Sala Multimedia\",\r\n  \"ubicacion\": \"Edificio de Ingeniería - Segundo piso\",\r\n  \"capacidad\": 12,\r\n  \"disponible\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 - Crear sala de reuniones",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Sala de Reuniones B\",\r\n  \"ubicacion\": \"Biblioteca Central - Segundo piso\",\r\n  \"capacidad\": 6,\r\n  \"disponible\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 - Listar salas",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 - Buscar sala por ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "06 - Actualizar sala principal",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"nombre\": \"Sala de Estudio A Renovada\",\r\n   \"ubicacion\": \"Biblioteca Central - Primer piso\",\r\n   \"capacidad\": 10,\r\n   \"disponible\": true\r\n }\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 - Crear reserva principal para sala 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreSolicitante\": \"Gabriel García\",\r\n  \"correoSolicitante\": \"garciaga@uamv.edu.ni\",\r\n  \"fecha\": \"2026-05-15\",\r\n  \"horaInicio\": \"08:00:00\",\r\n  \"horaFin\": \"10:00:00\",\r\n  \"motivo\": \"Estudio grupal para programación\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas/sala/1\n",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas",
+            "sala",
+            "1\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "08 - Crear segunda reserva para sala 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreSolicitante\": \"María López\",\r\n  \"correoSolicitante\": \"maria.lopez@uamv.edu.ni\",\r\n  \"fecha\": \"2026-05-15\",\r\n  \"horaInicio\": \"10:30:00\",\r\n  \"horaFin\": \"12:00:00\",\r\n  \"motivo\": \"Preparación de exposición de POO\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas/sala/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas",
+            "sala",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "09 - Crear reserva para sala 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombreSolicitante\": \"Carlos Mendoza\",\r\n  \"correoSolicitante\": \"carlos.mendoza@uamv.edu.ni\",\r\n  \"fecha\": \"2026-05-16\",\r\n  \"horaInicio\": \"13:00:00\",\r\n  \"horaFin\": \"15:00:00\",\r\n  \"motivo\": \"Reunión para proyecto de sistemas\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas/sala/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas",
+            "sala",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10 - Listar reservas",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 - Buscar reserva por ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas/{id}/reservas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas",
+            "{id}",
+            "reservas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "12 - Listar reservas de sala 1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/salas/1/reservas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "salas",
+            "1",
+            "reservas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "13 - Actualizar reserva principal",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"nombreSolicitante\": \"Gabriel García\",\r\n   \"correoSolicitante\": \"garciaga@uamv.edu.ni\",\r\n   \"fecha\": \"2026-05-15\",\r\n   \"horaInicio\": \"08:30:00\",\r\n   \"horaFin\": \"10:30:00\",\r\n   \"motivo\": \"Estudio grupal actualizado para programación\"\r\n }\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas/1/sala/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas",
+            "1",
+            "sala",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "14 - Eliminar reserva",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "15 - Verificar reservas después de eliminar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/reservas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "reservas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
